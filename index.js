@@ -2,8 +2,6 @@ const webpack = require("webpack");
 const path = require("path");
 
 function createCompiler(runCompiler) {
-  delete require.cache[require.resolve("ts-loader")];
-
   const c = webpack({
     context: path.resolve("./src"),
     mode: "development",
