@@ -1,6 +1,12 @@
 const webpack = require("webpack");
 const path = require("path");
 
+function logMemory(message) {
+  console.log(message, {
+    heapMBs: Math.trunc(process.memoryUsage().heapUsed / 1024 / 1024),
+  });
+}
+
 async function main() {
   const runCompiler = !!process.argv[2];
   if (runCompiler) {
