@@ -1,6 +1,6 @@
 # Ts-loader leak example
 
-This repo demonstrates a possible memory leak in `ts-loader`.
+This repo demonstrates a memory leak in `ts-loader` as of version 8.0.7.
 
 ## Why
 
@@ -23,7 +23,7 @@ The script will log used heap memory in MBs every time it removes references to 
 Memory usage should go up but eventually cleared, for example:
 ```
 ➜  ts-loader-leak git:(main) ✗ node index.js
-webpack will not run, process should *not* run
+webpack will not run, process should *not* run out of memory
 current heap usage { heapMBs: 13 }
 current heap usage { heapMBs: 15 }
 current heap usage { heapMBs: 16 }
